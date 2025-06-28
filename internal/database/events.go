@@ -41,7 +41,7 @@ func (cd CustomDate) Format(layout string) string {
 
 type Event struct {
 	Id          int        `json:"id"`
-	OwnerId     int        `json:"ownerId" binding:"required"`
+	OwnerId     int        `json:"ownerId"`
 	Name        string     `json:"name" binding:"required,min=3"`
 	Description string     `json:"description" binding:"required,min=10"`
 	Date        CustomDate `json:"date" binding:"required"`
